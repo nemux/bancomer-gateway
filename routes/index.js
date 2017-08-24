@@ -10,9 +10,9 @@ router.post('/pay', function(req, res, next){
     var num = Math.floor(Math.random() * 5) + 1;
 
     if(num > 1){
-     res.json({result: 'accepted'});
+      res.json({result: 'accepted', bank: 'Bancomer'});
     } else {
-      res.json({result: 'rejected'});
+      res.json({result: 'rejected', bank: 'Bancomer'});
     }
 });
 
