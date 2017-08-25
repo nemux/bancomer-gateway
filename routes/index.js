@@ -16,4 +16,14 @@ router.post('/pay', function(req, res, next){
     }
 });
 
+router.post('/pre_auth', function(req, res, next){
+    var num = Math.floor(Math.random() * 5) + 1;
+
+    if(num > 1){
+        res.json({result: 'accepted', bank: 'Bancomer'});
+    } else {
+        res.json({result: 'rejected', bank: 'Bancomer'});
+    }
+});
+
 module.exports = router;
